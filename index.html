@@ -1,89 +1,343 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HXH</title>
 
-</head>
+    <title>HXH - Curiosidades</title>
 
-<body>
-    <header>
-        <h1>Robótica Educacional</h1>
-        <p>Compartilhando conhecimentos sobre Robótica e tecnologia</p>
-        <style>
-        /* Estilos gerais do corpo da página */
+    <style>
+        /* Estilos gerais */
         body {
-            font-family: Arial, sans-serif; /* Define uma fonte mais moderna */
+            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f9; /* Fundo levemente acinzentado */
+            background-color: #f4f4f9;
         }
 
-        /* Estilo do cabeçalho principal */
+        /* Cabeçalho */
         header {
-            background-color: #183C63; /* Azul escuro */
-            color: #FFFFFF; /* Texto branco */
-            text-align: center; /* Centraliza o texto */
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
             max-width: 1200px;
-            margin: 0 auto; /* Centraliza o cabeçalho na tela */
+            margin: 0 auto;
             padding: 40px;
-            border-radius: 0 0 10px 10px; /* Borda suavemente arredondada embaixo */
+            border-radius: 0 0 10px 10px;
         }
 
-        /* Área do conteúdo principal */
+        header h1 {
+            margin: 0 0 10px 0;
+        }
+
+        /* Área dos posts */
         main {
             background-color: #FFFFFF;
             color: #183C63;
-            display: flex; /* Alinha a imagem e o texto lado a lado */
+            display: flex;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            gap: 20px; /* Espaço entre a imagem e o conteúdo */
-            border-radius: 8px; /* Arredonda os cantos do bloco */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve para dar profundidade */
+            gap: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        /* Efeito ao passar o mouse */
+        main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Imagens */
         img {
             width: 220px;
             height: 220px;
-            object-fit: cover; /* Evita que a imagem distorça caso mude de tamanho */
+            object-fit: cover;
             border-radius: 8px;
         }
 
-        /* Destaque para o nome do autor */
+        /* Autor */
         .artigo-autor {
             font-weight: bold;
             color: #555;
         }
+
+        /* Botões */
+        button {
+            border: none;
+            background-color: #f0f0f0;
+            padding: 8px 12px;
+            margin-right: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        /* Celular */
+        @media (max-width: 600px) {
+            main {
+                flex-direction: column;
+                margin: 15px;
+            }
+
+            img {
+                width: 100%;
+                height: 250px;
+            }
+
+            header {
+                margin: 0 15px;
+            }
+        }
     </style>
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <h1>Robótica Educacional</h1>
+
+        <p>Compartilhando conhecimentos sobre Robótica e tecnologia</p>
+
     </header>
 
+
+    <!-- PRIMEIRO POST -->
     <main>
+
         <img src="download (2).jfif"
-            alt="Explicação resumida sobre a Imagem escolhida, para as pessoas com dificuldades visuais.">
+            alt="Imagem relacionada a Hunter x Hunter">
+
         <div>
+
             <h2>Meu primeiro post</h2>
-            <p class="artigo-autor">Por: Kaio Luan</p>
-            <p>Boas-vindas! Aqui vou compartilhar curiosidades de Hunter X Hunter </p>
-            <button>❤️<span>0</span></button>
-            <button>👍 <span>0</span></button>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Boas-vindas! Aqui vou compartilhar curiosidades
+                de Hunter X Hunter.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
         </div>
+
     </main>
 
-</body>
-<script>
-    const botoes = document.querySelectorAll("button");
-    botoes.forEach(function (botao) {
-        botao.addEventListener("click", botaoClicado);
 
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            texto.textContent++;
-        }
-    });
-</script>
+    <!-- CURIOSIDADE DO GON -->
+    <main>
+
+        <img src="gon.jfif"
+            alt="Gon Freecss">
+
+        <div>
+
+            <h2>Curiosidade sobre o Gon</h2>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Gon Freecss é um dos protagonistas de
+                Hunter x Hunter. Ele é muito determinado
+                e parte em uma jornada para encontrar
+                seu pai, Ging Freecss.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CURIOSIDADE DO KILLUA -->
+    <main>
+
+        <img src="killua.jfif"
+            alt="Killua Zoldyck">
+
+        <div>
+
+            <h2>Curiosidade sobre o Killua</h2>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Killua pertence à família Zoldyck,
+                conhecida por formar assassinos.
+                Apesar de sua criação, ele se torna
+                um dos melhores amigos de Gon.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CURIOSIDADE DO KURAPIKA -->
+    <main>
+
+        <img src="kurapika.jfif"
+            alt="Kurapika">
+
+        <div>
+
+            <h2>Curiosidade sobre Kurapika</h2>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Kurapika é um dos últimos sobreviventes
+                conhecidos do clã Kurta. Seus olhos
+                ficam escarlates quando ele sente
+                emoções intensas.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CURIOSIDADE DO HISOKA -->
+    <main>
+
+        <img src="hisoka.jfif"
+            alt="Hisoka">
+
+        <div>
+
+            <h2>Curiosidade sobre Hisoka</h2>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Hisoka é um dos personagens mais
+                imprevisíveis da obra. Ele gosta de
+                enfrentar adversários fortes e possui
+                uma personalidade bastante misteriosa.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CURIOSIDADE DO LEORIO -->
+    <main>
+
+        <img src="leorio.jfif"
+            alt="Leorio">
+
+        <div>
+
+            <h2>Curiosidade sobre Leorio</h2>
+
+            <p class="artigo-autor">
+                Por: Kaio Luan
+            </p>
+
+            <p>
+                Leorio inicialmente busca dinheiro para
+                alcançar seus objetivos, mas demonstra
+                várias vezes que se importa muito com
+                seus amigos.
+            </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Seleciona todos os botões da página
+        const botoes = document.querySelectorAll("button");
+
+        // Adiciona uma função para cada botão
+        botoes.forEach(function (botao) {
+
+            botao.addEventListener("click", function () {
+
+                // Encontra o número dentro do botão
+                let texto = botao.querySelector("span");
+
+                // Aumenta o número de curtidas
+                texto.textContent =
+                    Number(texto.textContent) + 1;
+
+            });
+
+        });
+
+    </script>
+
+</body>
 
 </html>
